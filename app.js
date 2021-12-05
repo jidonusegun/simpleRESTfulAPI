@@ -33,7 +33,7 @@ app.use('/orders', orderRoute);
 app.use('/user', userRoute);
 
 app.use((req, res, next) => {
-    const error = new Error('Not Founderd')
+    const error = new Error('Not Found')
     error.status = 404;
     next(error);
 });
