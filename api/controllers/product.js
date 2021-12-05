@@ -1,5 +1,5 @@
-const Product = require('../module/product');
-const mongoose = require('mongoose');
+// const Product = require('../module/product');
+// const mongoose = require('mongoose');
 
 // exports.post_product = (req, res, next) => {
 //     const product = new Product({

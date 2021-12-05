@@ -1,7 +1,7 @@
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 
-const Order = require('../module/order');
-const Product = require('../module/product');
+// const Order = require('../module/order');
+// const Product = require('../module/product');
 
 // exports.post_order = (req, res, next) => {
 //     // Product.findById(req.body.productId)
