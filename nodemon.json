@@ -2,6 +2,7 @@
     "env": {
         "MONGO_ATLAS_USERNAME": "shegzy",
         "MONGO_ATLAS_PW": "shegzy",
-        "MONGO_ATLAS_DATABASE": "node-product"
+        "MONGO_ATLAS_DATABASE": "node-product",
+        "JWT_KEY": "secret"
     }
 }

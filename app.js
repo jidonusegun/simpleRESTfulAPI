@@ -6,10 +6,13 @@ const mongoose = require('mongoose');
 
 const productsRoute = require('./api/routes/products');
 const orderRoute = require('./api/routes/order');
+const userRoute = require('./api/routes/user');
 
 mongoose.connect('mongodb+srv://'+process.env.MONGO_ATLAS_USERNAME+':'+process.env.MONGO_ATLAS_PW+'@node-product.hqhsa.mongodb.net/'+process.env.MONGO_ATLAS_DATABASE+'?retryWrites=true&w=majority')
 
 app.use(morgan('dev'));
+
+app.use('/upload', express.static('upload'));
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
@@ -27,6 +30,7 @@ app.use((req,res, next) => {
 
 app.use('/products', productsRoute);
 app.use('/orders', orderRoute);
+app.use('/user', userRoute);
 
 app.use((req, res, next) => {
     const error = new Error('Not Found')
