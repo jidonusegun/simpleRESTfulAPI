@@ -35,9 +35,9 @@ const upload = multer({
 
 router.post('/', checkAuth, upload.single('productImage'), productController.post_product);
 
-router.get('/', productController.get_all_product);
+// router.get('/', productController.get_all_product);
 
-router.get('/:productId', productController.get_single_product);
+// router.get('/:productId', productController.get_single_product);
 
 router.patch('/:productId', productController.update_product);
 
