@@ -3,28 +3,28 @@ const mongoose = require('mongoose');
 const Order = require('../module/order');
 const Product = require('../module/product');
 
-exports.post_order = (req, res, next) => {
-    // Product.findById(req.body.productId)
-    // .exec()
-    // .then(result => {
-        const order = new Order({
-            _id: mongoose.Types.ObjectId(),
-            productId: result._id,
-            quantity: req.body.quantity
-        })
-        order.save()
-        .then(result => {
-            res.status(200).json({
-                message: 'Order added successfully',
-                id: result._id,
-                productId: result.productId,
-                quantity: result.quantity
-            })
-        })
-        .catch(err => {
-            res.status(500).json({message: 'Product does not exist'})
-        })
-}
+// exports.post_order = (req, res, next) => {
+//     // Product.findById(req.body.productId)
+//     // .exec()
+//     // .then(result => {
+//         const order = new Order({
+//             _id: mongoose.Types.ObjectId(),
+//             productId: result._id,
+//             quantity: req.body.quantity
+//         })
+//         order.save()
+//         .then(result => {
+//             res.status(200).json({
+//                 message: 'Order added successfully',
+//                 id: result._id,
+//                 productId: result.productId,
+//                 quantity: result.quantity
+//             })
+//         })
+//         .catch(err => {
+//             res.status(500).json({message: 'Product does not exist'})
+//         })
+// }
 
 // exports.get_all_orders = (req, res, next) => {
 //     Order.find()

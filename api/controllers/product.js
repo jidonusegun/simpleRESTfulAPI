@@ -1,29 +1,29 @@
 const Product = require('../module/product');
 const mongoose = require('mongoose');
 
-exports.post_product = (req, res, next) => {
-    const product = new Product({
-        _id: mongoose.Types.ObjectId(),
-        name: req.body.name,
-        price: req.body.price,
-        description: req.body.description,
-        productImage: req.file.path
-    })
-    product.save()
-    .then(result => {
-        res.status(200).json({
-            message: 'Product added successfully,',
-            id: result._id,
-            name: result.name,
-            price: result.price,
-            description: result.description,
-            productImage: result.productImage
-        })
-    })
-    .catch(err => {
-        res.status(500).json({error: err})
-    })
-}
+// exports.post_product = (req, res, next) => {
+//     const product = new Product({
+//         _id: mongoose.Types.ObjectId(),
+//         name: req.body.name,
+//         price: req.body.price,
+//         description: req.body.description,
+//         productImage: req.file.path
+//     })
+//     product.save()
+//     .then(result => {
+//         res.status(200).json({
+//             message: 'Product added successfully,',
+//             id: result._id,
+//             name: result.name,
+//             price: result.price,
+//             description: result.description,
+//             productImage: result.productImage
+//         })
+//     })
+//     .catch(err => {
+//         res.status(500).json({error: err})
+//     })
+// }
 
 // exports.get_all_product = (req, res, next) => {
 //     Product.find()
