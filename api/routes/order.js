@@ -10,8 +10,8 @@ router.post('/', orderController.post_order);
 
 // router.get('/:orderId', orderController.get_single_order);
 
-router.patch('/:orderId', orderController.update_order);
+// router.patch('/:orderId', orderController.update_order);
 
-router.delete('/:orderId', orderController.delete_order)
+// router.delete('/:orderId', orderController.delete_order)
 
 module.exports = router;
